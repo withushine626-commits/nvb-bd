@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday to My World! 🌸💍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #e1bee7);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Pyidaungsu', sans-serif;
+            overflow-x: hidden;
+            color: #4a4a4a;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            font-family: 'Sacramento', cursive;
+            font-size: 3rem;
+            color: #d81b60;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: #880e4f;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn {
+            background: #d81b60;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: 'Pyidaungsu', sans-serif;
+            box-shadow: 0 4px 15px rgba(216, 27, 96, 0.3);
+        }
+        .btn:hover {
+            background: #ad1457;
+            transform: scale(1.05);
+        }
+        /* Ring Selection Box Styles */
+        .ring-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .ring-box {
+            background: #fff;
+            border: 2px solid #f8bbd0;
+            padding: 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .ring-box:hover, .ring-box.selected {
+            border-color: #d81b60;
+            background: #fff0f5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(216,27,96,0.15);
+        }
+        .ring-icon {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+        .ring-title {
+            font-weight: bold;
+            color: #880e4f;
+            font-size: 0.95rem;
+        }
+        /* Floating Hearts Animation */
+        .heart {
+            position: absolute;
+            color: #d81b60;
+            font-size: 20px;
+            animation: flyUp 4s linear infinite;
+            opacity: 0.7;
+        }
+        @keyframes flyUp {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Background Hearts -->
+    <div id="hearts-container"></div>
+
+    <div class="container">
+        <!-- Step 1: Welcome -->
+        <div id="step-1" class="section active">
+            <h1>Happy Birthday!</h1>
+            <h2>ဂျပန်ရောက် ကိုယ့်ရဲ့တစိမ်းပြင်ပြင်က အသည်းတုံးလေးအတွက် 🌸</h2>
+            <p>မင်းအတွက် ကိုယ်ကိုယ်တိုင် တီထွင်ဖန်တီးထားတဲ့ အထူးဆုတောင်းလေးနဲ့ Surprise ရှိတယ်နော်။ ဖွင့်ကြည့်ဖို့ အောက်ကခလုတ်လေးကို နှိပ်လိုက်ပါဦးရှင့်။ ✨</p>
+            <button class="btn" onclick="nextStep(2)">Surprise ဖွင့်မည် 🎁</button>
+        </div>
+
+        <!-- Step 2: Message -->
+        <div id="step-2" class="section">
+            <h1>Wish For You</h1>
+            <p>
+                "နိုင်ငံခြားမှာ တစ်ယောက်တည်း ရုန်းကန်နေရပေမယ့် အမြဲတမ်းကြိုးစားပြီး ရဲရင့်နေတဲ့ ကိုယ့်ကောင်မလေးအတွက် မွေးနေ့မှာ အပျော်ရွှင်ရဆုံး၊ ကျန်းမာဆုံးနဲ့ လိုအဆန္ဒတွေအားလုံး ပြည့်ဝရပါစေနော်။ 
+                ကိုယ်နဲ့ဝေးနေပေမယ့် အသည်းနှလုံးကတော့ အမြဲတမ်း အနားမှာ ရှိနေပါတယ်... 
+                မွေးနေ့မှာ ပျော်ရွှင်စရာတွေနဲ့သာ ပြည့်နှက်ပါစေ၊ ချစ်ရတဲ့သူရေ..." ❤️🇯🇵
+            </p>
+            <button class="btn" onclick="nextStep(3)">လက်စွပ်လေး ရွေးရအောင် 💍</button>
+        </div>
+
+        <!-- Step 3: Ring Selection Boxes -->
+        <div id="step-3" class="section">
+            <h1>Pick A Ring</h1>
+            <p>ကိုယ့်ဆီကနေ လက်ဆောင်ပေးချင်တဲ့ လက်စွပ်ဒီဇိုင်းလေး တစ်ခုကို ရွေးပေးပါဦး 👇</p>
+            
+            <div class="ring-grid">
+                <div class="ring-box" onclick="selectRing('Diamond Solitaire (စိန်ပွင့်လေး - ထာဝရချစ်ခြင်း)')">
+                    <div class="ring-icon">💍</div>
+                    <div class="ring-title">Classic Diamond</div>
+                </div>
+                <div class="ring-box" onclick="selectRing('Rose Gold Band (ရိုးရှင်းပြီး လှပတဲ့ ရွှေပန်းရောင်)')">
+                    <div class="ring-icon">💖</div>
+                    <div class="ring-title">Rose Gold</div>
+                </div>
+                <div class="ring-box" onclick="selectRing('Sakura-themed Ring (ဂျပန်ဆာကူရာ ပုံစံလက်စွပ်လေး)')">
+                    <div class="ring-icon">🌸</div>
+                    <div class="ring-title">Sakura Bloom</div>
+                </div>
+                <div class="ring-box" onclick="selectRing('Crown Ring (ကိုယ့်ရဲ့ မင်းသမီးလေးအတွက် သရဖူလက်စွပ်)')">
+                    <div class="ring-icon">👑</div>
+                    <div class="ring-title">Royal Crown</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Final Result -->
+        <div id="step-4" class="section">
+            <h1>Yay! Selected! 🎉</h1>
+            <p id="result-text" style="font-weight: bold; color: #ad1457;"></p>
+            <p>ဒီလက်စွပ်လေးနဲ့အတူ ကိုယ့်ရဲ့မေတ္တာတွေနဲ့ ဆုတောင်းမေတ္တာတွေ အမြဲတမ်း အတူရှိနေမယ်နော်။ မွေးနေ့မှာ ပျော်ပျော်ရွှင်ရွှင်ဖြတ်သန်းပါ၊ ဂျပန်က ပြန်လာရင် လက်တွေ့ဝယ်ပေးမယ်နော်! ✈️❤️</p>
+            <button class="btn" onclick="resetApp">စလို့ ပြန်ကြည့်မယ် 🔄</button>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(stepNumber) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById('step-' + stepNumber).classList.add('active');
+        }
+
+        function selectRing(ringName) {
+            document.getElementById('result-textinnerHTML').innerText = "မင်းရွေးလိုက်တာက: " + ringName + " တဲ့ရှင်! 💕";
+            // For older/standard JS safety:
+            document.getElementById('result-text').innerText = "မင်းရွေးချယ်လိုက်တာက - " + ringName + " ပါရှင့်! 💝";
+            nextStep(4);
+        }
+
+        function resetApp() {
+            nextStep(1);
+        }
+
+        // Floating Hearts Generator
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = ['❤️', '🌸', '💖', '✨'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            document.getElementById('hearts-container').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        setInterval(createHeart, 400);
+    </script>
+</body>
+</html>
